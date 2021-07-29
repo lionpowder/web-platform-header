@@ -9,16 +9,296 @@
 </head>
 
 <body>
-  <h1>Hello there!</h1>
-  <a href="/me.html">My other page</a>
   <div class="headerbar">
     <div class="leftpanel"></div>
     <div class="rightpanel">
-      <span class="headerbutton">hi
-        <i class="fa fa-user-circle"></i>
-      </span>
+      <div>
+        <span class="dijit dijitReset dijitInline FeatureToolbarButton UserActionsButton dijitDropDownButton" widgetid="UI_Mixins__TooltipMixin_16">
+        <span class="dijitReset dijitInline dijitButtonNode" onclick="profileHeaderOnclick()" data-dojo-attach-event="ondijitclick:__onClick">
+          <span class="dijitReset dijitStretch dijitButtonContents" role="button" aria-haspopup="true" aria-labelledby="userActionsButtonLabel" title="" tabindex="0" id="UI_Mixins__TooltipMixin_16" style="user-select: none;" popupactive="false" aria-expanded="false" aria-owns="dijit_TooltipDialog_1">
+            <span class="dijitReset dijitInline dijitIcon fa fa-user-circle"></span>
+        </span>
+        </span>
+        </span>
+      </div>
+      <div id="userActionsButtonLabel" style="display: none;" class="dijitOutput" widgetid="userActionsButtonLabel">
+        Logged in user settings</div>
     </div>
   </div>
+
+  <div class="dijitPopup UserActionsMenuPopup" role="region" aria-label="dijit_TooltipDialog_1"
+    style="height: 682px; overflow: visible scroll; visibility: visible; top: 40px; left: 1008.01px; right: auto; border: 0px none rgb(0, 0, 0); z-index: 1000;"
+    id="popup_1" dijitpopupparent="UI_Mixins__TooltipMixin_16">
+    <div role="dialog" tabindex="-1" class="UserActionsMenu dijitTooltipDialog dijitTooltipBelow dijitTooltipABRight"
+      id="dijit_TooltipDialog_1" aria-labelledby="userActionsButtonLabel" widgetid="dijit_TooltipDialog_1"
+      style="top: 0px; border: none; visibility: hidden;">
+      <div class="dijitTooltipContainer" role="presentation">
+        <div data-dojo-attach-point="contentsNode" class="dijitTooltipContents dijitTooltipFocusNode">
+          <div data-dojo-attach-point="containerNode">
+            <div class="mobileContainer" data-dojo-attach-point="mobileContainer">
+              <div class="HRule" data-dojo-attach-point="hRule"></div>
+            </div>
+            <div class="UserActionsContainer" id="Client_UserActionsMenu_0" widgetid="Client_UserActionsMenu_0">
+              <div class="UserActionsHeader">
+                <div class="dijitInline">
+                  <img class="user-profile-image small-medium team-relate-enabled far fa-user-circle" id="UserProfileImage_0" widgetid="UserProfileImage_0" alt="" src="" data-automation-id="imgUserDefault">
+                </div>
+
+                <div class="dijitInline EmployeeNameContainer">
+                  <div class="EmployeeName" data-dojo-attach-point="employeeNameNode"></div>
+                  <div class="EmployeePosition" data-dojo-attach-point="employeePositionNode">Ceridian Administrator
+                    (System Role)</div>
+                </div>
+              </div>
+              <div class="UserActionsContent">
+                <div role="group" class="UserActionsRoles" aria-labelledby="roleAvailable">
+                  <div class="UserRolesHeader">
+                    <div id="roleAvailable" class="dijitInline" data-dojo-type="dojox/mvc/Output"
+                      data-dojo-props="value:localize('lblRolesAvailable')" widgetid="roleAvailable">Available Roles
+                    </div>
+                  </div>
+                  <div class="shrinkAndWrap" data-dojo-type="dojox/mvc/WidgetList"
+                    data-dojo-attach-event="CheckedChange:_onRoleRadioChange"
+                    data-dojo-props="children:at(this, 'roles').direction(at.from)"
+                    data-mvc-child-type="Framework/Client/ProfileContextMenuItem"
+                    data-mvc-child-props="'data-role':at(this.target).direction(at.from)" id="dojox_mvc_WidgetList_0"
+                    widgetid="dojox_mvc_WidgetList_0">
+                    <div id="Client_ProfileContextMenuItem_0" class="ProfileContextMenuItem" data-role="[object Object]"
+                      widgetid="Client_ProfileContextMenuItem_0">
+                      <div class="ProfileContextMenuItemLeftBorder"></div>
+                      <div data-dojo-mixins="Framework/UI/Mixins/_TooltipMixin" data-dojo-type="dijit/_Widget"
+                        class="UserRolesIpRestrictedIcon" data-dojo-attach-point="IpRestrictedIcon"
+                        data-dojo-props="tooltipLabel:localize('tipAccessToRoleIsRestricted')"
+                        id="UI_Mixins__TooltipMixin_19" widgetid="UI_Mixins__TooltipMixin_19"
+                        style="visibility: hidden;"></div>
+                      <div class="ProfileContextMenuItemContent">
+                        <div class="DayforceContextMenuRadioButton" data-dojo-attach-point="focusNode"
+                          data-dojo-attach-event="ondijitclick:_onClick,onkeydown:_onKeyDown,onkeyup:_onKeyUp"
+                          widgetid="Framework_UI_Form_ContextMenuRadioButton_0">
+                          <label for="Framework_UI_Form_ContextMenuRadioButton_0" class="" data-dojo-attach-point="labelNode">QA System Admin Child 1</label>
+                          <div class="radioContainer">
+                            <div data-dojo-attach-point="stateNode" class="dijit dijitReset dijitInline dijitRadio">
+                              <input name="roles" type="radio" role="radio" aria-checked="false" class="dijitReset dijitCheckBoxInput" data-dojo-attach-point="focusNode" value="on" tabindex="0" id="Framework_UI_Form_ContextMenuRadioButton_0" style="user-select: none;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div id="Client_ProfileContextMenuItem_1" class="ProfileContextMenuItem" data-role="[object Object]"
+                      widgetid="Client_ProfileContextMenuItem_1">
+                      <div class="ProfileContextMenuItemLeftBorder"></div>
+                      <div data-dojo-mixins="Framework/UI/Mixins/_TooltipMixin" data-dojo-type="dijit/_Widget"
+                        class="UserRolesIpRestrictedIcon" data-dojo-attach-point="IpRestrictedIcon"
+                        data-dojo-props="tooltipLabel:localize('tipAccessToRoleIsRestricted')"
+                        id="UI_Mixins__TooltipMixin_20" widgetid="UI_Mixins__TooltipMixin_20"
+                        style="visibility: hidden;"></div>
+                      <div class="ProfileContextMenuItemContent">
+                        <div class="DayforceContextMenuRadioButton" data-dojo-attach-point="focusNode"
+                          data-dojo-attach-event="ondijitclick:_onClick,onkeydown:_onKeyDown,onkeyup:_onKeyUp"
+                          widgetid="Framework_UI_Form_ContextMenuRadioButton_1">
+                          <label for="Framework_UI_Form_ContextMenuRadioButton_1" class="" data-dojo-attach-point="labelNode">QA System Admin Grand Child 1</label>
+                          <div class="radioContainer">
+                            <div data-dojo-attach-point="stateNode" class="dijit dijitReset dijitInline dijitRadio">
+                              <input name="roles" type="radio" role="radio" aria-checked="false" class="dijitReset dijitCheckBoxInput" data-dojo-attach-point="focusNode" value="on" tabindex="0" id="Framework_UI_Form_ContextMenuRadioButton_1" style="user-select: none;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div id="Client_ProfileContextMenuItem_2" class="ProfileContextMenuItem" data-role="[object Object]"
+                      widgetid="Client_ProfileContextMenuItem_2">
+                      <div class="ProfileContextMenuItemLeftBorder"></div>
+                      <div data-dojo-mixins="Framework/UI/Mixins/_TooltipMixin" data-dojo-type="dijit/_Widget"
+                        class="UserRolesIpRestrictedIcon" data-dojo-attach-point="IpRestrictedIcon"
+                        data-dojo-props="tooltipLabel:localize('tipAccessToRoleIsRestricted')"
+                        id="UI_Mixins__TooltipMixin_21" widgetid="UI_Mixins__TooltipMixin_21"
+                        style="visibility: hidden;"></div>
+                      <div class="ProfileContextMenuItemContent">
+                        <div class="DayforceContextMenuRadioButton" data-dojo-attach-point="focusNode"
+                          data-dojo-attach-event="ondijitclick:_onClick,onkeydown:_onKeyDown,onkeyup:_onKeyUp"
+                          widgetid="Framework_UI_Form_ContextMenuRadioButton_2">
+                          <label for="Framework_UI_Form_ContextMenuRadioButton_2" class="" data-dojo-attach-point="labelNode">QA Administrator (Non-System Role)</label>
+                          <div class="radioContainer">
+                            <div data-dojo-attach-point="stateNode" class="dijit dijitReset dijitInline dijitRadio">
+                              <input name="roles" type="radio" role="radio" aria-checked="false" class="dijitReset dijitCheckBoxInput" data-dojo-attach-point="focusNode" value="on" tabindex="0" id="Framework_UI_Form_ContextMenuRadioButton_2" style="user-select: none;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div id="Client_ProfileContextMenuItem_3" class="ProfileContextMenuItem" data-role="[object Object]"
+                      widgetid="Client_ProfileContextMenuItem_3">
+                      <div class="ProfileContextMenuItemLeftBorder"></div>
+                      <div data-dojo-mixins="Framework/UI/Mixins/_TooltipMixin" data-dojo-type="dijit/_Widget"
+                        class="UserRolesIpRestrictedIcon" data-dojo-attach-point="IpRestrictedIcon"
+                        data-dojo-props="tooltipLabel:localize('tipAccessToRoleIsRestricted')"
+                        id="UI_Mixins__TooltipMixin_22" widgetid="UI_Mixins__TooltipMixin_22"
+                        style="visibility: hidden;"></div>
+                      <div class="ProfileContextMenuItemContent">
+                        <div class="DayforceContextMenuRadioButton" data-dojo-attach-point="focusNode"
+                          data-dojo-attach-event="ondijitclick:_onClick,onkeydown:_onKeyDown,onkeyup:_onKeyUp"
+                          widgetid="Framework_UI_Form_ContextMenuRadioButton_3">
+                          <label for="Framework_UI_Form_ContextMenuRadioButton_3" class="" data-dojo-attach-point="labelNode">QA System Admin Child 2</label>
+                          <div class="radioContainer">
+                            <div data-dojo-attach-point="stateNode" class="dijit dijitReset dijitInline dijitRadio">
+                              <input name="roles" type="radio" role="radio" aria-checked="false" class="dijitReset dijitCheckBoxInput" data-dojo-attach-point="focusNode" value="on" tabindex="0" id="Framework_UI_Form_ContextMenuRadioButton_3" style="user-select: none;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div id="Client_ProfileContextMenuItem_4" class="ProfileContextMenuItem" data-role="[object Object]"
+                      widgetid="Client_ProfileContextMenuItem_4">
+                      <div class="ProfileContextMenuItemLeftBorder"></div>
+                      <div data-dojo-mixins="Framework/UI/Mixins/_TooltipMixin" data-dojo-type="dijit/_Widget"
+                        class="UserRolesIpRestrictedIcon" data-dojo-attach-point="IpRestrictedIcon"
+                        data-dojo-props="tooltipLabel:localize('tipAccessToRoleIsRestricted')"
+                        id="UI_Mixins__TooltipMixin_23" widgetid="UI_Mixins__TooltipMixin_23"
+                        style="visibility: hidden;"></div>
+                      <div class="ProfileContextMenuItemContent">
+                        <div class="DayforceContextMenuRadioButton" data-dojo-attach-point="focusNode"
+                          data-dojo-attach-event="ondijitclick:_onClick,onkeydown:_onKeyDown,onkeyup:_onKeyUp"
+                          widgetid="Framework_UI_Form_ContextMenuRadioButton_4">
+                          <label for="Framework_UI_Form_ContextMenuRadioButton_4" class="" data-dojo-attach-point="labelNode">Client Administrator J1</label>
+                          <div class="radioContainer">
+                            <div data-dojo-attach-point="stateNode" class="dijit dijitReset dijitInline dijitRadio">
+                              <input name="roles" type="radio" role="radio" aria-checked="false" class="dijitReset dijitCheckBoxInput" data-dojo-attach-point="focusNode" value="on" tabindex="0" id="Framework_UI_Form_ContextMenuRadioButton_4" style="user-select: none;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div id="Client_ProfileContextMenuItem_5" class="ProfileContextMenuItem" data-role="[object Object]"
+                      widgetid="Client_ProfileContextMenuItem_5">
+                      <div class="ProfileContextMenuItemLeftBorder"></div>
+                      <div data-dojo-mixins="Framework/UI/Mixins/_TooltipMixin" data-dojo-type="dijit/_Widget"
+                        class="UserRolesIpRestrictedIcon" data-dojo-attach-point="IpRestrictedIcon"
+                        data-dojo-props="tooltipLabel:localize('tipAccessToRoleIsRestricted')"
+                        id="UI_Mixins__TooltipMixin_24" widgetid="UI_Mixins__TooltipMixin_24"
+                        style="visibility: hidden;"></div>
+                      <div class="ProfileContextMenuItemContent">
+                        <div class="DayforceContextMenuRadioButton" data-dojo-attach-point="focusNode"
+                          data-dojo-attach-event="ondijitclick:_onClick,onkeydown:_onKeyDown,onkeyup:_onKeyUp"
+                          widgetid="Framework_UI_Form_ContextMenuRadioButton_5">
+                          <label for="Framework_UI_Form_ContextMenuRadioButton_5" class="" data-dojo-attach-point="labelNode">Client Admin A1 - Document</label>
+                          <div class="radioContainer">
+                            <div data-dojo-attach-point="stateNode" class="dijit dijitReset dijitInline dijitRadio">
+                              <input name="roles" type="radio" role="radio" aria-checked="false" class="dijitReset dijitCheckBoxInput" data-dojo-attach-point="focusNode" value="on" tabindex="0" id="Framework_UI_Form_ContextMenuRadioButton_5" style="user-select: none;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div id="Client_ProfileContextMenuItem_6" class="ProfileContextMenuItem" data-role="[object Object]"
+                      widgetid="Client_ProfileContextMenuItem_6">
+                      <div class="ProfileContextMenuItemLeftBorder"></div>
+                      <div data-dojo-mixins="Framework/UI/Mixins/_TooltipMixin" data-dojo-type="dijit/_Widget"
+                        class="UserRolesIpRestrictedIcon" data-dojo-attach-point="IpRestrictedIcon"
+                        data-dojo-props="tooltipLabel:localize('tipAccessToRoleIsRestricted')"
+                        id="UI_Mixins__TooltipMixin_25" widgetid="UI_Mixins__TooltipMixin_25"
+                        style="visibility: hidden;"></div>
+                      <div class="ProfileContextMenuItemContent">
+                        <div class="DayforceContextMenuRadioButton" data-dojo-attach-point="focusNode"
+                          data-dojo-attach-event="ondijitclick:_onClick,onkeydown:_onKeyDown,onkeyup:_onKeyUp"
+                          widgetid="Framework_UI_Form_ContextMenuRadioButton_6">
+                          <label for="Framework_UI_Form_ContextMenuRadioButton_6" class="" data-dojo-attach-point="labelNode">JC 1 (Trident Admin)</label>
+                          <div class="radioContainer">
+                            <div data-dojo-attach-point="stateNode" class="dijit dijitReset dijitInline dijitRadio">
+                              <input name="roles" type="radio" role="radio" aria-checked="false" class="dijitReset dijitCheckBoxInput" data-dojo-attach-point="focusNode" value="on" tabindex="0" id="Framework_UI_Form_ContextMenuRadioButton_6" style="user-select: none;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div id="Client_ProfileContextMenuItem_7"
+                      class="ProfileContextMenuItem DayforceContextMenuRadioButtonChecked DayforceContextMenuRadioButtonFocused"
+                      data-role="[object Object]" widgetid="Client_ProfileContextMenuItem_7">
+                      <div class="ProfileContextMenuItemLeftBorder"></div>
+                      <div data-dojo-mixins="Framework/UI/Mixins/_TooltipMixin" data-dojo-type="dijit/_Widget"
+                        class="UserRolesIpRestrictedIcon" data-dojo-attach-point="IpRestrictedIcon"
+                        data-dojo-props="tooltipLabel:localize('tipAccessToRoleIsRestricted')"
+                        id="UI_Mixins__TooltipMixin_26" widgetid="UI_Mixins__TooltipMixin_26"
+                        style="visibility: hidden;"></div>
+                      <div class="ProfileContextMenuItemContent">
+                        <div class="DayforceContextMenuRadioButton" data-dojo-attach-point="focusNode"
+                          data-dojo-attach-event="ondijitclick:_onClick,onkeydown:_onKeyDown,onkeyup:_onKeyUp"
+                          widgetid="Framework_UI_Form_ContextMenuRadioButton_7">
+                          <label for="Framework_UI_Form_ContextMenuRadioButton_7" class="dijitFocusedLabel" data-dojo-attach-point="labelNode">Ceridian Administrator (System Role)</label>
+                          <div class="radioContainer">
+                            <div data-dojo-attach-point="stateNode"
+                              class="dijit dijitReset dijitInline dijitRadio dijitRadioChecked dijitChecked dijitRadioFocused dijitRadioCheckedFocused dijitCheckedFocused dijitFocused">
+                              <input name="roles" type="radio" role="radio" aria-checked="true" class="dijitReset dijitCheckBoxInput dijitRadioFocused" data-dojo-attach-point="focusNode" value="on" tabindex="0" id="Framework_UI_Form_ContextMenuRadioButton_7" checked="checked" style="user-select: none;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div id="Client_ProfileContextMenuItem_8" class="ProfileContextMenuItem" data-role="[object Object]"
+                      widgetid="Client_ProfileContextMenuItem_8">
+                      <div class="ProfileContextMenuItemLeftBorder"></div>
+                      <div data-dojo-mixins="Framework/UI/Mixins/_TooltipMixin" data-dojo-type="dijit/_Widget"
+                        class="UserRolesIpRestrictedIcon" data-dojo-attach-point="IpRestrictedIcon"
+                        data-dojo-props="tooltipLabel:localize('tipAccessToRoleIsRestricted')"
+                        id="UI_Mixins__TooltipMixin_27" widgetid="UI_Mixins__TooltipMixin_27"
+                        style="visibility: hidden;"></div>
+                      <div class="ProfileContextMenuItemContent">
+                        <div class="DayforceContextMenuRadioButton" data-dojo-attach-point="focusNode"
+                          data-dojo-attach-event="ondijitclick:_onClick,onkeydown:_onKeyDown,onkeyup:_onKeyUp"
+                          widgetid="Framework_UI_Form_ContextMenuRadioButton_8">
+                          <label for="Framework_UI_Form_ContextMenuRadioButton_8" class="" data-dojo-attach-point="labelNode">Client Administrator</label>
+                          <div class="radioContainer">
+                            <div data-dojo-attach-point="stateNode" class="dijit dijitReset dijitInline dijitRadio">
+                              <input name="roles" type="radio" role="radio" aria-checked="false" class="dijitReset dijitCheckBoxInput" data-dojo-attach-point="focusNode" value="on" tabindex="0" id="Framework_UI_Form_ContextMenuRadioButton_8" style="user-select: none;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="HRule"></div>
+              <div class="UserActionsContent">
+                <div class="AccountSectionContainer">
+                  <div class="EmployeeProfileSettingsContainer">
+                    <div class="dijitOutput UserActionsEmployeeProfileSettings" id="UI_Mixins__FeatureDependencyMixin_0"
+                      tabindex="0" role="link" widgetid="UI_Mixins__FeatureDependencyMixin_0">Profile</div>
+                  </div>
+                  <div class="AboutContainer" data-dojo-attach-event="click:_aboutClick">
+                    <div class="dijitOutput UserActionsAbout" id="Output_3" tabindex="0" role="link"
+                      widgetid="Output_3">About</div>
+                  </div>
+                </div>
+              </div>
+              <div class="HRule"></div>
+              <div class="UserActionsFooter">
+                <div class="LogoutContainer">
+                  <div class="dijitOutput UserActionsLogout" id="Output_4" tabindex="0" role="link" widgetid="Output_4">
+                    Logout</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mainContent">
+    <h1>Hello there!</h1>
+    <a href="/me.html">My other page</a>
+  </div>
+
 </body>
 
 </html>

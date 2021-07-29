@@ -1,3 +1,532 @@
-i {
+i,
+span {
   font-family: 'FontAwesome', Arial;
+}
+
+* {
+  outline: none;
+}
+
+/*dojo*/
+.dijitPopup {
+  position: absolute;
+  background-color: transparent;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dijitTooltip,
+.dijitTooltipDialog {
+  background: transparent;
+}
+
+.dijitOffScreen {
+  position: absolute !important;
+  left: -10000px !important;
+  top: -10000px !important;
+}
+
+.dijitButtonNode * {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.dijitTooltipContainer {
+  background-image: none;
+  background-color: #f2f2f2;
+  border: 1px solid #b5b5b5;
+  padding: 6px 8px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+  font-size: 0.8em;
+  color: #818181;
+}
+
+.dijitInline {
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.dijitCheckBox input,
+.dijitRadio input {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.dijitCheckBoxInput {
+  opacity: 0;
+}
+
+.dijitToggleButton,
+.dijitButton,
+.dijitDropDownButton,
+.dijitComboButton {
+  margin: 0.2em;
+  vertical-align: middle;
+}
+
+.dijitStretch {
+  /* Middle (stretchy) part of a 3-element border */
+  white-space: nowrap; /* MOW: move somewhere else */
+  background-repeat: repeat-x;
+}
+
+.dijitButtonContents {
+  display: block; /* to make focus border rectangular */
+}
+
+.dijitButtonNode * {
+  vertical-align: middle;
+}
+
+.dijitReset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+/*header*/
+.headerbar {
+  display: flex;
+  height: 56px;
+  line-height: 56px;
+  background-image: none;
+  background-color: #fff;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+  -webkit-box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+
+.leftpanel {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.rightpanel {
+  font-size: 0;
+  margin-left: auto;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -o-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  height: 100%;
+  display: flex;
+  white-space: nowrap;
+  flex: 1;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+}
+
+.FeatureToolbarButton,
+.FeatureToolbarButton.dijitButton,
+.FeatureToolbarButton .dijitButton,
+.FeatureToolbarButton .dijitButtonNode,
+.FeatureToolbarButton .dijitButtonNode .dijitButtonText,
+.FeatureToolbarButton.dijitHover .dijitButtonNode,
+.FeatureToolbarButton.dijitActive .dijitButtonNode,
+.FeatureToolbarButton.dijitFocused .dijitButtonNode {
+  background-image: none;
+  border: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.FeatureToolbarButton .dijitIcon {
+  font-size: 16px;
+  color: #696969;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 2.4rem;
+  width: 2.4rem;
+  position: relative;
+  line-height: normal;
+}
+
+.FeatureToolbarButton .dijitIcon:hover {
+  background-color: rgba(28, 28, 30, 0.12) !important;
+}
+
+/*popup*/
+.UserActionsMenuPopup {
+  overflow-y: visible !important;
+}
+
+.UserActionsMenuPopup.dijitPopup {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  min-width: 36rem;
+  width: calc(100% / 3);
+  right: 1.6rem !important;
+  left: unset !important;
+  max-height: calc(100% - 5.6rem) !important;
+}
+
+.UserActionsMenuPopup .UserActionsMenu {
+  padding: 1.6rem 0 0.2rem 0;
+}
+
+.UserActionsMenuPopup .UserActionsMenu,
+.UserActionsMenuPopup .UserActionsMenu .dijitTooltipContainer,
+.UserActionsMenuPopup
+  .UserActionsMenu
+  .dijitTooltipContainer
+  .dijitTooltipContents {
+  height: 100%;
+}
+
+.UserActionsMenuPopup .dijitTooltipDialog .dijitTooltipFocusNode,
+.UserActionsMenuPopup .dijitTooltipDialog .dijitTooltipContainer {
+  padding: 0;
+  margin: 0;
+}
+
+.UserActionsMenuPopup .UserActionsMenu .dijitTooltipContainer {
+  border: 0;
+}
+
+.UserActionsMenuPopup .UserActionsMenu,
+.UserActionsMenuPopup .UserActionsMenu .dijitTooltipContainer,
+.UserActionsMenuPopup
+  .UserActionsMenu
+  .dijitTooltipContainer
+  .dijitTooltipContents {
+  height: 100%;
+}
+
+.UserActionsMenuPopup
+  .UserActionsMenu
+  .dijitTooltipContainer
+  .dijitTooltipContents {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.UserActionsContainer .UserActionsHeader {
+  background-color: rgba(28, 28, 30, 0.039);
+  padding: 12px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.UserActionsContainer .UserActionsHeader,
+.UserActionsContainer .UserActionsFooterInner {
+  padding: 12px;
+}
+
+.UserActionsContainer .EmployeeNameContainer {
+  padding-left: 8px;
+}
+
+.UserActionsContainer .user-profile-image.small-medium {
+  font-size: 40px;
+}
+
+.user-profile-image {
+  display: block;
+  -webkit-border-radius: 99999px;
+  border-radius: 99999px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.UserActionsContainer .EmployeeName {
+  font-family: Arial;
+  font-style: normal;
+  color: #1c1c1e;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2.1rem;
+  margin: 0.4rem 0;
+  left: 0;
+  top: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: streth;
+  align-self: streth;
+  -ms-flex-item-align: streth;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -o-box-flex: 0;
+  -ms-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  white-space: normal;
+  line-break: normal;
+}
+
+.UserActionsContainer .EmployeePosition {
+  color: #606062;
+  font-size: 1.4rem;
+  top: 2.5rem;
+  height: 1.6rem;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 16px;
+  margin: 0.4rem 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -o-box-flex: 0;
+  -ms-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+}
+
+.UserActionsContainer .UserActionsRoles {
+  font-size: 10pt;
+  font-weight: 600;
+}
+
+.UserActionsContainer .UserActionsRoles .UserRolesHeader {
+  color: #1c1c1e;
+  height: 1rem;
+  top: 1rem;
+  left: 1rem;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.UserActionsContainer .UserActionsContent .shrinkAndWrap {
+  margin: 1rem 0 0.8rem 0;
+}
+
+.UserActionsContainer .ProfileContextMenuItem {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 1rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -o-box-align: stretch;
+  -ms-flex-align: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  margin-bottom: 8px;
+}
+
+.UserActionsContainer .ProfileContextMenuItem:hover {
+  background: rgba(28, 28, 30, 0.08);
+}
+
+.UserActionsContainer .ProfileContextMenuItem .ProfileContextMenuItemContent {
+  padding: 8px 8px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.UserActionsContainer
+  .ProfileContextMenuItem
+  .ProfileContextMenuItemLeftBorder {
+  position: relative;
+  background: transparent;
+  width: 0.2rem;
+  min-height: 2rem;
+  margin: 0.2rem 0.1rem;
+}
+
+.UserActionsContainer .DayforceContextMenuRadioButton {
+  cursor: pointer;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1rem;
+  font-size: 1rem;
+  color: #1c1c1e;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.UserActionsContainer .DayforceContextMenuRadioButton label,
+.UserActionsContainer .DayforceContextMenuRadioButton input[type='radio'] {
+  cursor: pointer;
+}
+
+.UserActionsContainer .DayforceContextMenuRadioButton .radioContainer {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -o-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.UserActionsContainer .DayforceContextMenuRadioButton .dijitRadio {
+  background-image: unset;
+  border: 1px solid rgba(28, 28, 30, 0.2);
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  height: 0.8rem;
+  width: 0.8rem;
+  padding: 0.3rem;
+  background-position: unset !important;
+}
+
+.UserActionsMenu .HRule {
+  display: block;
+  border-top: solid 1px #d1d2d3;
+}
+
+.UserActionsContainer .AccountSectionContainer {
+  margin: 1.5rem 0;
+}
+
+.UserActionsContainer .EmployeeProfileSettingsContainer {
+  height: 1rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.UserActionsContainer .UserActionsEmployeeProfileSettings {
+  padding: 0.9rem 0 0 1rem;
+  height: 1rem;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1rem;
+  color: #1c1c1e;
+}
+
+.UserActionsContainer .AboutContainer {
+  height: 1.5rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.UserActionsContainer .UserActionsAbout {
+  padding: 0.9rem 0 0 1rem;
+  height: 1rem;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1rem;
+  color: #1c1c1e;
+}
+
+.UserActionsContainer .UserActionsFooter {
+  padding-bottom: 0.1rem;
+}
+
+.UserActionsContainer .LogoutContainer {
+  height: 1.5rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.UserActionsContainer .UserActionsLogout {
+  padding: 1rem 0 0 1rem;
+  height: 1rem;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1rem;
+  color: #1c1c1e;
+  cursor: pointer;
+}
+
+.UserActionsContainer .UserActionsEmployeeProfileSettings:focus,
+.UserActionsContainer .UserActionsAbout:focus,
+.UserActionsContainer .UserActionsLogout:focus {
+  outline: 1px solid blue;
 }
